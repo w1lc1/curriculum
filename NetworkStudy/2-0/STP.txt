@@ -1,0 +1,11 @@
+問1.switch3
+
+問2.switch1 F0/1 DP　　　　　　　　　　　　　　switch2 F0/1がRPの為
+            F0/2 RP　ルートブリッジに近い方
+    switch2 F0/1 RP　ルートブリッジに近い方
+            F0/2 BP　　　　　　　　　　　　　　switch4 E0/1よりルートブリッジに遠い為
+    switch3 E0/1 DP　ルートブリッジに最も近い為
+            E0/2 DP　ルートブリッジに最も近い為
+    switch4 E0/1 DP　　　　　　　　　　　　　　switch2 F0/2よりルートブリッジに近い為
+            E0/2 RP　ルートブリッジに近い方
+            
