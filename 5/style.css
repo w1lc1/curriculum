@@ -1,0 +1,98 @@
+h1 {
+    display: inline;
+    font-size: 30px;
+    line-height: 2; /* 上下の余白を調整 */
+    margin: 0 30px;
+}
+
+p {
+    display: inline;
+    font-size: 20px;
+    line-height: 1.5; /* 上下の余白を調整 */
+    margin: 0 30px;
+}
+
+.fill {
+    font-size: 20px;
+    padding: 10px 150px 10px 10px;
+    margin: 10px 30px;
+}
+
+input[type="submit"] {
+    background-color: #0074D9;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0 100px 30px;
+}
+
+input[type="number"] {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 30px;
+}
+
+.signup {
+    display: inline-block; /* インラインブロック要素に設定 */
+    vertical-align: middle; /* 垂直方向に中央揃え */
+    margin: 10px; /* 上下に余白を設定 */
+    background-color: #2db0c2; /* ボタンの背景色 */
+    color: #fff; /* テキストの色 */
+    padding: 10px 20px; /* パディング（ボタンのサイズ調整） */
+    text-decoration: none; /* リンクの下線を削除 */
+    border: none; /* ボーダーを削除 */
+    border-radius: 5px; /* 角丸にする */
+    cursor: pointer; /* マウスカーソルをポインターに変更 */
+}
+
+.registerbook {
+    display: inline-block;
+    margin: 10px 10px 0 30px;
+    background-color: #0074D9;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout {
+    display: inline-block;
+    background-color: gray;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    margin: 30px;
+    text-align: center;
+    border-collapse: collapse; /* テーブルのボーダーを一つにまとめる */
+}
+
+th {
+    background-color: lightgray;
+}
+
+th, td {
+    padding: 10px 50px;
+    border: 1px solid lightgray; /* ボーダー線のスタイルと色 */
+}
+
+.delete {
+    display: inline-block;
+    background-color: red;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
