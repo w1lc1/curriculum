@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <select onchange="changeLang()">
+        <option id="select">選択してください</option>
+        <option id="selected_jpn">日本語</option>
+        <option id="selected_en">English</option>
+        <option id="selected_all">全て表示</option>
+    </select>
+    <table>
+        <tr class="jpn">
+            <th>日本</th>
+            <td>こんにちは</td>
+            <td>ありがとう</td>
+            <td>さようなら</td>
+        </tr>
+        <tr class="en">
+            <th>English</th>
+            <td>Hello</td>
+            <td>Thank you</td>
+            <td>Good Bye</td>
+        </tr>
+    </table>
+
+    <script>
+        function changeLang() {
+            var select = document.getElementById("select");
+            var selectedJpn = document.getElementById("selected_jpn");
+            var selectedEn = document.getElementById("selected_en");
+            var selectedAll = document.getElementById("selected_all");
+            var jpnRows = document.querySelectorAll(".jpn");
+            var enRows = document.querySelectorAll(".en");
+
+            if (select.selected) {
+                // 選択されていない場合、すべての行を非表示にする
+                for (var i = 0; i < jpnRows.length; i++) {
+                    jpnRows[i].classList.add("hidden");
+                }
+                for (var i = 0; i < enRows.length; i++) {
+                    enRows[i].classList.add("hidden");
+                }
+            } else if (selectedJpn.selected) {
+                // 日本語が選択された場合、日本語の行を表示し、英語の行を非表示にする
+                for (var i = 0; i < jpnRows.length; i++) {
+                    jpnRows[i].classList.remove("hidden");
+                }
+                for (var i = 0; i < enRows.length; i++) {
+                    enRows[i].classList.add("hidden");
+                }
+            } else if (selectedEn.selected) {
+                // 英語が選択された場合、英語の行を表示し、日本語の行を非表示にする
+                for (var i = 0; i < jpnRows.length; i++) {
+                    jpnRows[i].classList.add("hidden");
+                }
+                for (var i = 0; i < enRows.length; i++) {
+                    enRows[i].classList.remove("hidden");
+                }
+            } else if (selectedAll.selected) {
+                // 全て表示が選択された場合、すべての行を表示する
+                for (var i = 0; i < jpnRows.length; i++) {
+                    jpnRows[i].classList.remove("hidden");
+                }
+                for (var i = 0; i < enRows.length; i++) {
+                    enRows[i].classList.remove("hidden");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
